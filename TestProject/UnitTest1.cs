@@ -47,6 +47,16 @@ namespace TestProject
 		}
 
 		[TestMethod]
+		public void TestShirtNumber()
+		{
+			Assert.AreEqual(44, fp.ShirtNumber);
+			fp.ShirtNumber = 1;
+			Assert.AreEqual(1, fp.ShirtNumber);
+			fp.ShirtNumber = 100;
+			Assert.AreEqual(100, fp.ShirtNumber);
+		}
+
+		[TestMethod]
 		[ExpectedException(typeof(NullReferenceException))]
 		public void TestNullNameException()
 		{
@@ -64,6 +74,20 @@ namespace TestProject
 		public void TestNegativePriceException()
 		{
 			fp.Price = -1;
+		}
+
+		[TestMethod]
+		[ExpectedException(typeof(Exception))]
+		public void TestShirtNumberException()
+		{
+			fp.ShirtNumber = 0;
+		}
+
+		[TestMethod]
+		[ExpectedException(typeof(Exception))]
+		public void TestShirtNumberException2()
+		{
+			fp.ShirtNumber = 101;
 		}
 	}
 }

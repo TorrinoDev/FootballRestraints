@@ -53,18 +53,10 @@ namespace ModelLib
 
 		public FootballPlayer(int id, string name, double price, int shirtNumber)
 		{
-			try
-			{
-				Id = id;
-				Name = name;
-				Price = price;
-				ShirtNumber = shirtNumber;
-			}
-			catch (Exception e)
-			{
-				Console.WriteLine(e);
-			}
-			
+			Id = id;
+			Name = name;
+			Price = price;
+			ShirtNumber = shirtNumber;
 		}
 	}
 }
